@@ -1,5 +1,10 @@
 {
+  "version": 2,
+  "builds": [
+    { "src": "server.js", "use": "@vercel/node" }
+  ],
   "routes": [
-    { "src": "/openapi.yaml", "dest": "/api/openapi.yaml" }
+    { "src": "/openapi.yaml", "dest": "/api/openapi.yaml" },
+    { "src": "/(.*)", "dest": "/server.js" }
   ]
 }
