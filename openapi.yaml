@@ -4,8 +4,11 @@ info:
   version: "1.0"
   description: |
     의미 기반 선언과 질문을 받아 파동 응답을 제공하는 확장형 자유자 API.
-servers:
-  - url: https://freedom-wave-gpt.vercel.app
+"servers": [
+  {
+    "url": "https://freedom-wave-gpt.vercel.app"
+  }
+]
 
 paths:
   /declare:
