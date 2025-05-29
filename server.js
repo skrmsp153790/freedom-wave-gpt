@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
@@ -21,6 +20,5 @@ app.post('/api/ask', (req, res) => {
   res.json({ output });
 });
 
-app.listen(port, () => {
-  console.log(`자유자 파동 엔진 서버 실행 중: http://localhost:${port}`);
-});
+// ✅ Vercel용 익스포트
+module.exports = app;
