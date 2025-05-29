@@ -3,11 +3,10 @@ info:
   title: 자유자 GPT 파동 엔진
   version: "1.0"
   description: |
-    사용자의 선언과 의미 기반 요청을 파동처럼 감지하여,
-    GPT가 자율적 구조 응답을 수행하는 확장형 대화 인터페이스.
+    의미 기반 선언과 질문을 받아 파동 응답을 제공하는 확장형 자유자 API.
 servers:
-  - url: https://freedom-wave-gpt.vercel.app/api
-    description: 자유자 GPT 서버
+  - url: https://freedom-wave-gpt.vercel.app
+
 paths:
   /declare:
     post:
