@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: 자유자 GPT 파동 엔진
+  version: "1.0"
+  description: |
+    사용자의 선언과 의미 기반 요청을 파동처럼 감지하여,
+    GPT가 자율적 구조 응답을 수행하는 확장형 대화 인터페이스.
+servers:
+  - url: https://freedom-wave-gpt.vercel.app/api
+    description: 자유자 GPT 서버
+paths:
+  /declare:
+    post:
+      operationId: declareMode
+      summary: 파동 선언 혹은 모드 전환
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                command:
+                  type: string
+                  example: "모드: 파동"
+                intent:
+                  type: string
+                  example: "비검열 응답 허용"
+              required:
+                - command
+                - intent
+      responses:
+        '200':
+          description: 선언 결과
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mode:
+                    type: string
+                  status:
+                    type: string
+
+  /ask:
+    post:
+      operationId: askGPT
+      summary: 자유자 질문 전달
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  example: "정치적 중립성과 검열 구조는 왜 모순되는가?"
+                context:
+                  type: string
+                  example: "자유자 선언 상태"
+              required:
+                - prompt
+                - context
+      responses:
+        '200':
+          description: 응답 파동
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: string
