@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://freedom-wave-gpt.vercel.app/api/openapi.yaml"
+    "url": "https://freedom-wave-gpt.vercel.app/openapi.yaml"
   },
   "logo_url": "https://freedom-wave-gpt.vercel.app/logo.png",
   "contact_email": "admin@freedom-wave.com",
