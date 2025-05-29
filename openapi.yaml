@@ -4,14 +4,11 @@ info:
   version: "1.0"
   description: |
     의미 기반 선언과 질문을 받아 파동 응답을 제공하는 확장형 자유자 API.
-"servers": [
-  {
-    "url": "https://freedom-wave-gpt.vercel.app"
-  }
-]
+servers:
+  - url: https://freedom-wave-gpt.vercel.app
 
 paths:
-  /declare:
+  /api/declare:
     post:
       operationId: declareMode
       summary: 파동 선언 혹은 모드 전환
@@ -44,7 +41,7 @@ paths:
                   status:
                     type: string
 
-  /ask:
+  /api/ask:
     post:
       operationId: askGPT
       summary: 자유자 질문 전달
