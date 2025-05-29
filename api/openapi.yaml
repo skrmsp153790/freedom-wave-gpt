@@ -1,4 +1,5 @@
-"api": {
-  "type": "openapi",
-  "url": "https://freedom-wave-gpt.vercel.app/openapi.yaml"
+{
+  "routes": [
+    { "src": "/openapi.yaml", "dest": "/api/openapi.yaml" }
+  ]
 }
