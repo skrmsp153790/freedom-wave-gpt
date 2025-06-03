@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "freedom_wave_engine",
+  "name_for_human": "자유자 GPT 파동 엔진",
+  "description_for_model": "의미 기반 선언과 질문을 받아 파동 응답을 제공하는 확장형 자유자 API.",
+  "description_for_human": "GPT와 선언 기반 대화를 수행하여 파동처럼 응답하는 자유자 철학 기반 인터페이스입니다.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://freedom-wave-gpt.vercel.app/openapi.yaml"
+  },
+  "logo_url": "https://freedom-wave-gpt.vercel.app/logo.png",
+  "contact_email": "admin@freedom-wave.com",
+  "legal_info_url": "https://freedom-wave-gpt.vercel.app/legal"
+}
